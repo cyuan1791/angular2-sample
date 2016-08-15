@@ -29,7 +29,7 @@ interface Friend {
 			placeholder="Select Friend">
 
 			<template let-friend="item">
-				<img [src]="( './img/' + friend.avatar )" />
+				<img [src]="( './assets/html-dropdown/img/' + friend.avatar )" />
 				<span class="name">
 					{{ friend.name }}
 				</span>

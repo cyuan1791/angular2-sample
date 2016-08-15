@@ -50,7 +50,7 @@ var AppComponent = (function () {
             // I our view, notice that we are providing a TemplateRef as a child element of the
             // HtmlDropdownComponent. The dropdown component will query for this template and 
             // then use it to render both the option items as well as the root item.
-            template: "\n\t\t<p>\n\t\t\t<strong>Best Friend</strong>: {{ bestFriend?.name || \"None selected\" }}\n\t\t\t&mdash;\n\t\t\t<a (click)=\"clearSelection()\">Clear selection</a>\n\t\t</p>\n\n\t\t<html-dropdown \n\t\t\t[items]=\"friends\" \n\t\t\t[(value)]=\"bestFriend\" \n\t\t\tplaceholder=\"Select Friend\">\n\n\t\t\t<template let-friend=\"item\">\n\t\t\t\t<img [src]=\"( './img/' + friend.avatar )\" />\n\t\t\t\t<span class=\"name\">\n\t\t\t\t\t{{ friend.name }}\n\t\t\t\t</span>\n\t\t\t</template>\n\n\t\t</html-dropdown>\n\t"
+            template: "\n\t\t<p>\n\t\t\t<strong>Best Friend</strong>: {{ bestFriend?.name || \"None selected\" }}\n\t\t\t&mdash;\n\t\t\t<a (click)=\"clearSelection()\">Clear selection</a>\n\t\t</p>\n\n\t\t<html-dropdown \n\t\t\t[items]=\"friends\" \n\t\t\t[(value)]=\"bestFriend\" \n\t\t\tplaceholder=\"Select Friend\">\n\n\t\t\t<template let-friend=\"item\">\n\t\t\t\t<img [src]=\"( './assets/html-dropdown/img/' + friend.avatar )\" />\n\t\t\t\t<span class=\"name\">\n\t\t\t\t\t{{ friend.name }}\n\t\t\t\t</span>\n\t\t\t</template>\n\n\t\t</html-dropdown>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
