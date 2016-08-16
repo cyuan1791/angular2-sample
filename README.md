@@ -10,4 +10,4 @@
 <h2>5. Get a github account and clone it.</h2>
 <h2>6. cd angulaur2-sample and do npm install. </h2>
 <h2>7. npm start </h2>
-<h2>8. To run a different sample, edit app/main.ts and redo npm start<.h2>
+<h2>8. To run a different sample, edit app/main.ts and redo npm start</h2>
