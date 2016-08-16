@@ -1,5 +1,7 @@
 import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
 
+// Onle one import AddModule at a time
+// After change, do npm start
 // for html-dropdown sample
 //import { AppModule } from './html-dropdown/app.module';
 
