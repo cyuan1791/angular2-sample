@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Angular 2 Sample</h1>
+<h1 style="text-align: center;">Angular 2 Samples</h1>
 <h2>1. Install Node.js</h2>
 <h2>2. Install typescript </h2>
   <h3>&nbsp;&nbsp;&nbsp;npm install -g typescript</h3>
