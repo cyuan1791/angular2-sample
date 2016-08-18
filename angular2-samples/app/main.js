@@ -1,7 +1,8 @@
 "use strict";
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var app_module_1 = require('./lessons/start/1-hello-world/app.module');
+//import { AppModule } from './lessons/start/1-hello-world/app.module';
 //import { AppModule } from './lessons/start/2-fisrt-component/app.module';
+var app_module_1 = require('./lessons/start/3-multi-component/app.module');
 // Onle one import AddModule at a time
 // After change, do npm start
 // for html-dropdown sample
