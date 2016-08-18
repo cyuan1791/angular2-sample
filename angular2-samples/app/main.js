@@ -2,7 +2,8 @@
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 //import { AppModule } from './lessons/start/1-hello-world/app.module';
 //import { AppModule } from './lessons/start/2-fisrt-component/app.module';
-var app_module_1 = require('./lessons/start/3-multi-component/app.module');
+//import { AppModule } from './lessons/start/3-multi-component/app.module';
+var app_module_1 = require('./lessons/start/4-ng-content/app.module');
 // Onle one import AddModule at a time
 // After change, do npm start
 // for html-dropdown sample
