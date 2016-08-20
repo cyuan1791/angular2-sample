@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
 @Component({
 	selector: "my-app",
 	template: `
+    <h1> Property and Event Binding</h1>
     <hr>
     <h3>DOM property binding</h3>
     <h4>./DOM-Property/DOMProperty.component.ts</h4>
