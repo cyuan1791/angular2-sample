@@ -11,22 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
+// for two-way binding
+var forms_1 = require('@angular/forms');
 var DOMProperties_component_1 = require("./DOM-Properties/DOMProperties.component");
 var DirectiveProperties_component_1 = require("./DirectiveProperties/DirectiveProperties.component");
 var CustomProperties_component_1 = require("./CustomProperties/CustomProperties.component");
 var CustomEvent_component_1 = require("./CustomEvent/CustomEvent.component");
+var TwoWayBinding_component_1 = require("./TwoWayBinding/TwoWayBinding.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
             declarations: [
                 app_component_1.AppComponent,
                 DOMProperties_component_1.DOMPropertiesComponent,
                 DirectiveProperties_component_1.DirectivePropertiesComponent,
                 CustomProperties_component_1.CustomPropertiesComponent,
-                CustomEvent_component_1.CustomEventComponent
+                CustomEvent_component_1.CustomEventComponent,
+                TwoWayBinding_component_1.TwoWayBindingComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

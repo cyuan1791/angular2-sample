@@ -9,22 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var DOMPropertiesComponent = (function () {
-    function DOMPropertiesComponent() {
-        this.mylink = 'http://www.cnn.com';
+var TwoWayBindingComponent = (function () {
+    function TwoWayBindingComponent() {
+        this.title = 'Hello World';
     }
-    DOMPropertiesComponent.prototype.ClickMe = function ($event) {
-        alert("Click");
-        console.log($event);
-    };
-    DOMPropertiesComponent = __decorate([
+    TwoWayBindingComponent = __decorate([
         core_1.Component({
-            selector: "dom-properties",
-            template: "\n    <h4>Method One :  <a href={{mylink}} target=_blank_>MyLink - Use Interpolation</a></h4>\n    <h4>Method Two :  <a [href]=\"mylink\" target=_blank_>MyLink - Use Bracket  </a></h4>\n    <p>\n    <p>\n    <h3>DOM Event binding</h3>\n    <button (click) = \"ClickMe($event)\"> Click Me</button> \n"
+            selector: "two-way-binding",
+            template: "\n    <input type=\"text\"  [(ngModel)] = \"title\">\n    <input type=\"text\"  [(ngModel)] = \"title\">\n"
         }), 
         __metadata('design:paramtypes', [])
-    ], DOMPropertiesComponent);
-    return DOMPropertiesComponent;
+    ], TwoWayBindingComponent);
+    return TwoWayBindingComponent;
 }());
-exports.DOMPropertiesComponent = DOMPropertiesComponent;
-//# sourceMappingURL=DOMProperties.component.js.map
+exports.TwoWayBindingComponent = TwoWayBindingComponent;
+//# sourceMappingURL=TwoWayBinding.component.js.map

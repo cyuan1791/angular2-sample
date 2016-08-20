@@ -34,7 +34,7 @@ var CustomEventComponent = (function () {
             // (click)="onClick($event)"
             // on-click="onClick($event)"
             // (click) and on-click are identical
-            template: "\n        Lesson for class and event binding : Click the star \n        <i class=\"glyphicon\"\n            (click)=\"onClick($event)\"\n            [class.glyphicon-star]=\"isStar\"\n            [class.glyphicon-star-empty]=\"!isStar\"\n        ></i>\n"
+            template: "\n        Click the star \n        <i class=\"glyphicon\"\n            (click)=\"onClick($event)\"\n            [class.glyphicon-star]=\"isStar\"\n            [class.glyphicon-star-empty]=\"!isStar\"\n        ></i>\n"
         }), 
         __metadata('design:paramtypes', [])
     ], CustomEventComponent);

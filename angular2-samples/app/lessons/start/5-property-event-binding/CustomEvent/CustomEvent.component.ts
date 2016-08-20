@@ -7,7 +7,7 @@ import { Component, Input,Output, EventEmitter } from "@angular/core";
     // on-click="onClick($event)"
     // (click) and on-click are identical
 	template: `
-        Lesson for class and event binding : Click the star 
+        Click the star 
         <i class="glyphicon"
             (click)="onClick($event)"
             [class.glyphicon-star]="isStar"
