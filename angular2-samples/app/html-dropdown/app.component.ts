@@ -20,13 +20,13 @@ interface Friend {
 		<p>
 			<strong>Best Friend</strong>: {{ bestFriend?.name || "None selected" }}
 			&mdash;
-			<a (click)="clearSelection()">Clear selection</a>
+			<button (click)="clearSelection()">Clear selection</button>
 		</p>
 
 		<html-dropdown 
 			[items]="friends" 
 			[(value)]="bestFriend" 
-			placeholder="Select Friend">
+			placeholder="Select a friend">
 
 			<template let-friend="item">
 				<img [src]="( './assets/html-dropdown/img/' + friend.avatar )" />

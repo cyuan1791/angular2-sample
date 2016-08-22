@@ -17,6 +17,15 @@ import { TemplateRef} from "@angular/core";
 	host: {
 		"[class.is-open]": "isShowingItems"
 	},
+	styles: [`
+	ul {
+		list-style: none;
+	}
+	li {
+		border: 1px solid black;
+	}
+	
+`],
 
 	template:
 	`
@@ -29,11 +38,11 @@ import { TemplateRef} from "@angular/core";
 				</template>
 
 			</div>
-			<div *ngSwitchCase="false" class="placeholder">
+			<button *ngSwitchCase="false" class="placeholder">
 				
 				{{ placeholder || "Nothing Selected" }}
 
-			</div>
+			</button>
 		</div>
 
 		<ul *ngIf="isShowingItems" class="dropdown-items">
