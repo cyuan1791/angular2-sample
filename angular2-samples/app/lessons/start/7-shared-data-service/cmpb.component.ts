@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LogService } from './log.service';
 import { DataService } from './data.service';
 
@@ -15,10 +15,11 @@ import { DataService } from './data.service';
         <button (click)='onGet()'> Refresh Storage</button>
         <ul><li *ngFor='let item of items'>{{item}}</li></ul>
       </div>
+      {{value}}
     </div>,
 `
 })
-export class CmpBComponent {
+export class CmpBComponent implements OnInit {
     value='';
     items: string[] = [];
     constructor (private logService: LogService, private dataService: DataService) {}
@@ -30,5 +31,11 @@ export class CmpBComponent {
     }
     onGet() {
         this.items = this.dataService.getData();
+    }
+    ngOnInit() {
+      this.dataService.pushdata.subscribe(
+        data => this.value = data
+        //data => console.log('call subscrive')
+      );
     }
 }

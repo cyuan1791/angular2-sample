@@ -14,6 +14,7 @@ import { DataService } from './data.service';
       <input type='text' #input>
       <button (click)='onLog(input.value)'>Log</button>
       <button (click)='onStore(input.value)'>Store</button>
+      <button (click)='onSend(input.value)'>Send</button>
       <div>
         <button (click)='onGet()'> Refresh Storage</button>
         <ul><li *ngFor='let item of items'>{{item}}</li></ul>
@@ -33,5 +34,9 @@ export class CmpAComponent {
     }
     onGet() {
         this.items = this.dataService.getData();
+    }
+    onSend(value: string) {
+      this.dataService.pushData(value);
+      
     }
 }

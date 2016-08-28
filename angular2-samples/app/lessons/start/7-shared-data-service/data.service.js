@@ -15,6 +15,7 @@ var log_service_1 = require('./log.service');
 var DataService = (function () {
     function DataService(logService) {
         this.logService = logService;
+        this.pushdata = new core_1.EventEmitter();
         this.data = [];
     }
     ;
@@ -24,6 +25,10 @@ var DataService = (function () {
     };
     DataService.prototype.getData = function () {
         return this.data;
+    };
+    DataService.prototype.pushData = function (value) {
+        this.pushdata.emit(value);
+        console.log('pushData:' + value);
     };
     DataService = __decorate([
         core_1.Injectable(), 

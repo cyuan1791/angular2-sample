@@ -28,11 +28,15 @@ var CmpBComponent = (function () {
     CmpBComponent.prototype.onGet = function () {
         this.items = this.dataService.getData();
     };
+    CmpBComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.pushdata.subscribe(function (data) { return _this.value = data; });
+    };
     CmpBComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'cmpb',
-            template: "\n    <div>\n      <input type='text' #input>\n      <button (click)='onLog(input.value)'>Log</button>\n      <button (click)='onStore(input.value)'>Store</button>\n      <div>\n        <button (click)='onGet()'> Refresh Storage</button>\n        <ul><li *ngFor='let item of items'>{{item}}</li></ul>\n      </div>\n    </div>,\n"
+            template: "\n    <div>\n      <input type='text' #input>\n      <button (click)='onLog(input.value)'>Log</button>\n      <button (click)='onStore(input.value)'>Store</button>\n      <div>\n        <button (click)='onGet()'> Refresh Storage</button>\n        <ul><li *ngFor='let item of items'>{{item}}</li></ul>\n      </div>\n      {{value}}\n    </div>,\n"
         }), 
         __metadata('design:paramtypes', [log_service_1.LogService, data_service_1.DataService])
     ], CmpBComponent);
