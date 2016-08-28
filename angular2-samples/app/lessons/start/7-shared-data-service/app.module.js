@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var cmpa_component_1 = require('./cmpa.component');
 var cmpb_component_1 = require('./cmpb.component');
+var log_service_1 = require('./log.service');
 //import { routing } from './app.routing'; //TODO: Create app.routing
 var AppModule = (function () {
     function AppModule() {
@@ -23,7 +24,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
             ],
             declarations: [app_component_1.AppComponent, cmpa_component_1.CmpAComponent, cmpb_component_1.CmpBComponent],
-            providers: [],
+            providers: [log_service_1.LogService],
             bootstrap: [app_component_1.AppComponent],
         }), 
         __metadata('design:paramtypes', [])

@@ -3,6 +3,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CmpAComponent } from './cmpa.component';
 import { CmpBComponent } from './cmpb.component';
+import { LogService } from './log.service';
 
 //import { routing } from './app.routing'; //TODO: Create app.routing
 
@@ -12,7 +13,7 @@ import { CmpBComponent } from './cmpb.component';
     //trouting,
     ],
     declarations: [AppComponent,CmpAComponent, CmpBComponent],
-    providers: [/* TODO: Providers go here */],
+    providers: [ LogService],
     bootstrap: [AppComponent],
 })
 export class AppModule { }
