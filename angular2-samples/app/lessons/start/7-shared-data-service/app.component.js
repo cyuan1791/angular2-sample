@@ -28,7 +28,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            template: "\n        <cmpa></cmpa>\n        <hr>\n        <cmpb></cmpb>\n        ",
+            template: "\n        <div>\n        <ol>\n        <li> Enter text and  Click Log will send text to conole</li>\n        <li> Enter text and click Store will store into an array. Click Refresh Storage will display array content. Component A and B share the same storage array.</li>\n        <li> Enter text and click Send in Component A will send data to component B</li>\n        </ol>\n        </div>\n        <cmpa></cmpa>\n        <hr>\n        <cmpb></cmpb>\n        ",
             providers: [cmpa_component_1.CmpAComponent, cmpb_component_1.CmpBComponent, log_service_1.LogService, data_service_1.DataService]
         }), 
         __metadata('design:paramtypes', [])

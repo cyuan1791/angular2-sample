@@ -11,6 +11,7 @@ import { DataService } from './data.service';
     selector: 'cmpa',
     template: `
     <div>
+      <h5> Component A </h5>
       <input type='text' #input>
       <button (click)='onLog(input.value)'>Log</button>
       <button (click)='onStore(input.value)'>Store</button>

@@ -16,6 +16,13 @@ import { DataService } from './data.service';
     moduleId: module.id,
     selector: 'my-app',
     template: `
+        <div>
+        <ol>
+        <li> Enter text and  Click Log will send text to conole</li>
+        <li> Enter text and click Store will store into an array. Click Refresh Storage will display array content. Component A and B share the same storage array.</li>
+        <li> Enter text and click Send in Component A will send data to component B</li>
+        </ol>
+        </div>
         <cmpa></cmpa>
         <hr>
         <cmpb></cmpb>

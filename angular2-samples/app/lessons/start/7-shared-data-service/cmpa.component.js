@@ -38,7 +38,7 @@ var CmpAComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'cmpa',
-            template: "\n    <div>\n      <input type='text' #input>\n      <button (click)='onLog(input.value)'>Log</button>\n      <button (click)='onStore(input.value)'>Store</button>\n      <button (click)='onSend(input.value)'>Send</button>\n      <div>\n        <button (click)='onGet()'> Refresh Storage</button>\n        <ul><li *ngFor='let item of items'>{{item}}</li></ul>\n      </div>\n    </div>,\n"
+            template: "\n    <div>\n      <h5> Component A </h5>\n      <input type='text' #input>\n      <button (click)='onLog(input.value)'>Log</button>\n      <button (click)='onStore(input.value)'>Store</button>\n      <button (click)='onSend(input.value)'>Send</button>\n      <div>\n        <button (click)='onGet()'> Refresh Storage</button>\n        <ul><li *ngFor='let item of items'>{{item}}</li></ul>\n      </div>\n    </div>,\n"
         }), 
         __metadata('design:paramtypes', [log_service_1.LogService, data_service_1.DataService])
     ], CmpAComponent);

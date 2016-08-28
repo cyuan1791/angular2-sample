@@ -8,6 +8,7 @@ import { DataService } from './data.service';
     selector: 'cmpb',
     template: `
     <div>
+      <h5> Component B </h5>
       <input type='text' #input>
       <button (click)='onLog(input.value)'>Log</button>
       <button (click)='onStore(input.value)'>Store</button>
