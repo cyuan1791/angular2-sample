@@ -8,19 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Import the core angular services.
-var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
+var DataDrivenComponent = (function () {
+    function DataDrivenComponent() {
+        this.myForm = new forms_1.FormGroup({
+            'username': new forms_1.FormControl(),
+            'email': new forms_1.FormControl(),
+            'password': new forms_1.FormControl()
+        });
     }
-    AppComponent = __decorate([
+    DataDrivenComponent.prototype.onSubmit = function () {
+        console.log(this.myForm);
+    };
+    DataDrivenComponent = __decorate([
         core_1.Component({
-            selector: "my-app",
-            template: "\n\t<h2>Hello World</h2>\n\t"
+            moduleId: module.id,
+            selector: 'data-driven',
+            templateUrl: 'data-driven.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DataDrivenComponent);
+    return DataDrivenComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DataDrivenComponent = DataDrivenComponent;
+//# sourceMappingURL=data-driven.component.js.map

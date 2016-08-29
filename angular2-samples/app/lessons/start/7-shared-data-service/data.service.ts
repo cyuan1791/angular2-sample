@@ -3,7 +3,9 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { LogService } from './log.service';
 
+// for pushData, so Component B could subscribe
 @Injectable()
+
 export class DataService {
    pushdata = new EventEmitter<string>();
    private data: string[] = [];

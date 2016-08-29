@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 // file data.service.ts
 var core_1 = require('@angular/core');
 var log_service_1 = require('./log.service');
+// for pushData, so Component B could subscribe
 var DataService = (function () {
     function DataService(logService) {
         this.logService = logService;
