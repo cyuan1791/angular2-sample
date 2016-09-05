@@ -9,15 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var auth_service_1 = require("./auth.service");
 var HeaderComponent = (function () {
-    function HeaderComponent() {
+    function HeaderComponent(authService) {
+        this.authService = authService;
     }
+    HeaderComponent.prototype.isAuth = function () {
+        return this.authService.isAuthenticated();
+    };
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'my-header',
-            template: "\n       \n        <header>\n            <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n        \n                    <ul class=\"nav navbar-nav\">\n        \n                        <li><a [routerLink]=\"['signup']\" >Sign Up</a></li>\n                        <li><a [routerLink]=\"['signin']\">Sign In</a></li>\n                        <li><a [routerLink]=\"['protected']\">Protected</a></li>\n        \n                    </ul>\n                    <ul class=\"nav navbar-nav navbar-right\">\n        \n                        <li><a>Logout</a></li>\n                    </ul>\n                </div><!-- /.container-fluid -->\n        \n            </nav>\n        \n        </header>\n    "
+            template: "\n       \n        <header>\n            <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n        \n                    <ul class=\"nav navbar-nav\">\n        \n                        <li><a [routerLink]=\"['signup']\" >Sign Up</a></li>\n                        <li><a [routerLink]=\"['signin']\">Sign In</a></li>\n                        <li><a [routerLink]=\"['protected']\">Protected</a></li>\n        \n                    </ul>\n                    <ul class=\"nav navbar-nav navbar-right\" *ngIf=\"isAuth()\">\n        \n                        <li><a>Logout</a></li>\n                    </ul>\n                </div><!-- /.container-fluid -->\n        \n            </nav>\n        \n        </header>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [auth_service_1.AuthService])
     ], HeaderComponent);
     return HeaderComponent;
 }());

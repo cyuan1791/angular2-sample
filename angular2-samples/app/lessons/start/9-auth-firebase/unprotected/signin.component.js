@@ -10,14 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var auth_service_1 = require('../shared/auth.service');
 var SigninComponent = (function () {
-    function SigninComponent(fb) {
+    function SigninComponent(fb, authService) {
         this.fb = fb;
+        this.authService = authService;
         this.error = false;
         this.errorMessage = '';
     }
     SigninComponent.prototype.onSignin = function () {
+        this.authService.signinUser(this.myForm.value);
     };
+    ;
     SigninComponent.prototype.ngOnInit = function () {
         this.myForm = this.fb.group({
             email: ['', forms_1.Validators.required],
@@ -28,7 +32,7 @@ var SigninComponent = (function () {
         core_1.Component({
             template: "\n        <h3>Please sign up to use all features</h3>\n        <form [formGroup]=\"myForm\" (ngSubmit)=\"onSignin()\">\n            <div class=\"form-group\">\n                <label for=\"email\">E-Mail</label>\n                <input class=\"form-control\" formControlName=\"email\" type=\"email\" id=\"email\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input class=\"form-control\" formControlName=\"password\" type=\"password\" id=\"password\">\n            </div>\n            <div class=\"form-group\">\n            <button class=\"btn btn-default\" type=\"submit\" [disabled]=\"!myForm.valid\">Sign In</button>\n            </div>\n        </form>\n    "
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
+        __metadata('design:paramtypes', [forms_1.FormBuilder, auth_service_1.AuthService])
     ], SigninComponent);
     return SigninComponent;
 }());

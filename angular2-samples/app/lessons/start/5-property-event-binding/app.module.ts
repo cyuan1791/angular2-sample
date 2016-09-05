@@ -24,4 +24,3 @@ import { TwoWayBindingComponent } from "./TwoWayBinding/TwoWayBinding.component"
     bootstrap: [AppComponent]
 })
 export class AppModule{}
-

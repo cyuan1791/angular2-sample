@@ -28,13 +28,13 @@ var DataDrivenComponent = (function () {
             'password': ['', forms_1.Validators.required],
             'gender': ['male'],
             'hobbies': formBuilder.array([
-                ['Cooking', forms_1.Validators.required]
+                ['Cooking', forms_1.Validators.required, this.asyncExampleValidator]
             ])
         });
         this.myForm.statusChanges.subscribe(function (data) { return console.log(data); });
     }
     DataDrivenComponent.prototype.onAddHobby = function () {
-        this.myForm.find('hobbies').push(new forms_1.FormControl('', forms_1.Validators.required));
+        this.myForm.find('hobbies').push(new forms_1.FormControl('', forms_1.Validators.required, this.asyncExampleValidator));
     };
     DataDrivenComponent.prototype.onSubmit = function () {
         console.log(this.myForm);
@@ -44,6 +44,19 @@ var DataDrivenComponent = (function () {
             return { example: true };
         }
         return null;
+    };
+    DataDrivenComponent.prototype.asyncExampleValidator = function (control) {
+        var promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                if (control.value == 'Example') {
+                    resolve({ 'invalid': true });
+                }
+                else {
+                    resolve(null);
+                }
+            }, 1500);
+        });
+        return promise;
     };
     DataDrivenComponent = __decorate([
         core_1.Component({
