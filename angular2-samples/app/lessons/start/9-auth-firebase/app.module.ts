@@ -11,6 +11,7 @@ import { SignupComponent } from "./unprotected/signup.component";
 import { ProtectedComponent } from "./protected/protected.component";
 import { routing} from "./app.routing";
 import { AuthService} from "./shared/auth.service";
+import { AuthGuard } from "./shared/auth.guard";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AuthService} from "./shared/auth.service";
         SignupComponent,
         ProtectedComponent
     ],
-    providers: [ AuthService ],
+    providers: [ AuthGuard, AuthService],
+
     imports: [BrowserModule, HttpModule, routing, ReactiveFormsModule],
     bootstrap: [AppComponent]
 })

@@ -1,9 +1,17 @@
 import { User } from "./User.interface";
+import { Router } from "@angular/router";
+import { Injectable } from '@angular/core';
 
 //var firebase: any;
 declare var firebase: any;
 
+@Injectable()
+
 export class AuthService {
+    private router : Router;
+    constructor(router : Router){
+        this.router = router;
+    };
     sigupUser(user: User) {
         //console.log(user);
         firebase.auth().createUserWithEmailAndPassword(user.email, user.password).catch(function (error) {
@@ -22,6 +30,8 @@ export class AuthService {
             // ...
             console.log(error);
         });
+        this.router.navigate(['/protected']);
+
     }
     isAuthenticated() {
         var user = firebase.auth().currentUser;
@@ -35,5 +45,10 @@ export class AuthService {
             //console.log('not login');
             return false;
         }
+    }
+    logoutUser() {
+        firebase.auth().signOut();
+        console.log('logout');
+        this.router.navigate(['/signin']);
     }
 }

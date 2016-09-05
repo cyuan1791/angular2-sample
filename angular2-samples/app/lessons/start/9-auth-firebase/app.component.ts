@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AuthGuard } from "./shared/auth.guard";
 
 @Component({
   moduleId: module.id,

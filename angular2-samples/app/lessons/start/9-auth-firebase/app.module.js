@@ -20,6 +20,7 @@ var signup_component_1 = require("./unprotected/signup.component");
 var protected_component_1 = require("./protected/protected.component");
 var app_routing_1 = require("./app.routing");
 var auth_service_1 = require("./shared/auth.service");
+var auth_guard_1 = require("./shared/auth.guard");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,7 +33,7 @@ var AppModule = (function () {
                 signup_component_1.SignupComponent,
                 protected_component_1.ProtectedComponent
             ],
-            providers: [auth_service_1.AuthService],
+            providers: [auth_guard_1.AuthGuard, auth_service_1.AuthService],
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routing_1.routing, forms_1.ReactiveFormsModule],
             bootstrap: [app_component_1.AppComponent]
         }), 

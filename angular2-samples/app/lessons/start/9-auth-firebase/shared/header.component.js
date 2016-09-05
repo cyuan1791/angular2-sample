@@ -15,12 +15,16 @@ var HeaderComponent = (function () {
         this.authService = authService;
     }
     HeaderComponent.prototype.isAuth = function () {
+        //this.router.navigate(['Protected']);
         return this.authService.isAuthenticated();
+    };
+    HeaderComponent.prototype.onLogout = function () {
+        this.authService.logoutUser();
     };
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'my-header',
-            template: "\n       \n        <header>\n            <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n        \n                    <ul class=\"nav navbar-nav\">\n        \n                        <li><a [routerLink]=\"['signup']\" >Sign Up</a></li>\n                        <li><a [routerLink]=\"['signin']\">Sign In</a></li>\n                        <li><a [routerLink]=\"['protected']\">Protected</a></li>\n        \n                    </ul>\n                    <ul class=\"nav navbar-nav navbar-right\" *ngIf=\"isAuth()\">\n        \n                        <li><a>Logout</a></li>\n                    </ul>\n                </div><!-- /.container-fluid -->\n        \n            </nav>\n        \n        </header>\n    "
+            template: "\n       \n        <header>\n            <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n        \n                    <ul class=\"nav navbar-nav\">\n        \n                        <li><a [routerLink]=\"['signup']\" >Sign Up</a></li>\n                        <li><a [routerLink]=\"['signin']\">Sign In</a></li>\n                        <li><a [routerLink]=\"['protected']\">Protected</a></li>\n        \n                    </ul>\n                    <ul class=\"nav navbar-nav navbar-right\" *ngIf=\"isAuth()\">\n        \n                        <li><a (click) = \"onLogout()\">Logout</a></li>\n                    </ul>\n                </div><!-- /.container-fluid -->\n        \n            </nav>\n        \n        </header>\n    "
         }), 
         __metadata('design:paramtypes', [auth_service_1.AuthService])
     ], HeaderComponent);

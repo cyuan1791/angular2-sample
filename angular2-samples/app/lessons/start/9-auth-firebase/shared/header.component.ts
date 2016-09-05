@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { AuthService } from "./auth.service";
 
+
 @Component({
     selector: 'my-header',
     template: `
@@ -18,7 +19,7 @@ import { AuthService } from "./auth.service";
                     </ul>
                     <ul class="nav navbar-nav navbar-right" *ngIf="isAuth()">
         
-                        <li><a>Logout</a></li>
+                        <li><a (click) = "onLogout()">Logout</a></li>
                     </ul>
                 </div><!-- /.container-fluid -->
         
@@ -28,9 +29,13 @@ import { AuthService } from "./auth.service";
     `
 })
 export class HeaderComponent {
-    constructor(private authService : AuthService){
+    constructor(private authService: AuthService) {
     }
     isAuth() {
+        //this.router.navigate(['Protected']);
         return this.authService.isAuthenticated();
+    }
+    onLogout() {
+        this.authService.logoutUser();
     }
 }
