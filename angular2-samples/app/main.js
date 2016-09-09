@@ -1,15 +1,6 @@
 "use strict";
-var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-//import { AppModule } from './lessons/start/1-hello-world/app.module';
-//import { AppModule } from './lessons/start/2-fisrt-component/app.module';
-//import { AppModule } from './lessons/start/3-multi-component/app.module';
-//import { AppModule } from './lessons/start/4-ng-content/app.module';
-//import { AppModule } from './lessons/start/5-property-event-binding/app.module';
-//import { AppModule } from './lessons/start/6-routing/app.module';
-//import { AppModule } from './lessons/start/7-shared-data-service/app.module';
-//import { AppModule } from './lessons/start/8-form/app.module';
-//import { AppModule } from './lessons/start/8-form-validating/app.module';
-var app_module_1 = require('./lessons/start/9-auth-firebase/app.module');
+// rc 5 import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
+var platform_browser_1 = require('@angular/platform-browser');
 // Onle one import AddModule at a time
 // After change, do npm start
 // for html-dropdown sample
@@ -18,5 +9,6 @@ var app_module_1 = require('./lessons/start/9-auth-firebase/app.module');
 //import { AppModule } from './lessons/binding/property-event/app.module';
 // lesson for custom event
 //import { AppModule } from './lessons/binding/custom-event/app.module';
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
+// rc 5 platformBrowserDynamic().bootstrapModule(AppModule);
+platform_browser_1.platformBrowser().bootstrapModuleFactory(MyAppModuleNgFactory);
 //# sourceMappingURL=main.js.map

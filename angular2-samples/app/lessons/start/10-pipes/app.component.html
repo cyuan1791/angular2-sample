@@ -1,0 +1,20 @@
+<div class="pipes">
+  <h1>Pipes</h1>
+  <h2>Built-in Pipes</h2>
+  <p>{{myValue | uppercase}}</p>
+  <p>{{myDate | date:"MM/dd/yy"}}</p>
+  <p>{{myValue | slice:3:7 | uppercase}}</p>
+  <hr>
+  <h2>Custom Pipe</h2>
+  <input type="text" #input (keyup)="0">
+  <p>{{input.value | double}}</p>
+  <hr>
+  <input type="text" #newItem>
+  <button (click)="values.push(newItem.value)" class="btn btn-primary">Add Item</button>
+  <ul>
+    <li *ngFor="let item of values | filter:'ea'">{{item}}</li>
+  </ul>
+  <hr>
+  <h2>Async Pipe</h2>
+  <p>{{asyncValue | async}}</p>
+</div>

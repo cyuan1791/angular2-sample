@@ -1,4 +1,5 @@
-import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
+// rc 5 import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
+import {platformBrowser} from '@angular/platform-browser';
 
 //import { AppModule } from './lessons/start/1-hello-world/app.module';
 //import { AppModule } from './lessons/start/2-fisrt-component/app.module';
@@ -9,7 +10,9 @@ import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
 //import { AppModule } from './lessons/start/7-shared-data-service/app.module';
 //import { AppModule } from './lessons/start/8-form/app.module';
 //import { AppModule } from './lessons/start/8-form-validating/app.module';
-import { AppModule } from './lessons/start/9-auth-firebase/app.module';
+//import { AppModule } from './lessons/start/9-auth-firebase/app.module';
+//import { AppModule } from './lessons/start/10-pipes/app.module';
+import { AppModule } from './lessons/start/11-http/app.module';
 
 // Onle one import AddModule at a time
 // After change, do npm start
@@ -22,4 +25,5 @@ import { AppModule } from './lessons/start/9-auth-firebase/app.module';
 // lesson for custom event
 //import { AppModule } from './lessons/binding/custom-event/app.module';
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+// rc 5 platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowser().bootstrapModuleFactory(MyAppModuleNgFactory)
