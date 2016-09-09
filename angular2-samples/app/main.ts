@@ -1,5 +1,5 @@
-// rc 5 import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
-import {platformBrowser} from '@angular/platform-browser';
+import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
+//import {platformBrowser} from '@angular/platform-browser';
 
 //import { AppModule } from './lessons/start/1-hello-world/app.module';
 //import { AppModule } from './lessons/start/2-fisrt-component/app.module';
@@ -26,4 +26,5 @@ import { AppModule } from './lessons/start/11-http/app.module';
 //import { AppModule } from './lessons/binding/custom-event/app.module';
 
 // rc 5 platformBrowserDynamic().bootstrapModule(AppModule);
-platformBrowser().bootstrapModuleFactory(MyAppModuleNgFactory)
+
+platformBrowserDynamic().bootstrapModule(AppModule);

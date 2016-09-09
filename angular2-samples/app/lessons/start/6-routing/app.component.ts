@@ -1,12 +1,12 @@
 
 // Import the core angular services.
 import { Component } from "@angular/core";
-import { ROUTER_DIRECTIVES } from "@angular/router";
+//import { ROUTER_DIRECTIVES } from "@angular/router";
 
 
 @Component({
 	selector: "my-app",
-	directives: [ROUTER_DIRECTIVES],
+//	directives: [ROUTER_DIRECTIVES],
 	template: `
     <hr>
 	<a [routerLink] = "['']"> Home </a>

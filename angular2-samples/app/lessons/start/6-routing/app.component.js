@@ -10,14 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Import the core angular services.
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+//import { ROUTER_DIRECTIVES } from "@angular/router";
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: "my-app",
-            directives: [router_1.ROUTER_DIRECTIVES],
+            //	directives: [ROUTER_DIRECTIVES],
             template: "\n    <hr>\n\t<a [routerLink] = \"['']\"> Home </a>\n\t<a [routerLink] = \"['FirstComponent']\"> FirstComponent </a>\n\t<a [routerLink] = \"['SecondComponent']\"> SecondComponent </a>\n\t<a [routerLink] = \"['ThirdComponent']\"> ThirdComponent </a>\n    <hr>\n    <router-outlet> </router-outlet>\n"
         }), 
         __metadata('design:paramtypes', [])

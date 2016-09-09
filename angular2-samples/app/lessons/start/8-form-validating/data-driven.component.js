@@ -34,7 +34,7 @@ var DataDrivenComponent = (function () {
         this.myForm.statusChanges.subscribe(function (data) { return console.log(data); });
     }
     DataDrivenComponent.prototype.onAddHobby = function () {
-        this.myForm.find('hobbies').push(new forms_1.FormControl('', forms_1.Validators.required, this.asyncExampleValidator));
+        //(<FormArray>this.myForm.find('hobbies')).push(new FormControl('', Validators.required, this.asyncExampleValidator));
     };
     DataDrivenComponent.prototype.onSubmit = function () {
         console.log(this.myForm);

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   FormGroup,
   FormControl,
-  REACTIVE_FORM_DIRECTIVES,
+  //REACTIVE_FORM_DIRECTIVES,
   Validators,
   FormBuilder,
   FormArray
@@ -44,7 +44,7 @@ export class DataDrivenComponent {
     );
   }
 onAddHobby() {
-    (<FormArray>this.myForm.find('hobbies')).push(new FormControl('', Validators.required, this.asyncExampleValidator));
+    //(<FormArray>this.myForm.find('hobbies')).push(new FormControl('', Validators.required, this.asyncExampleValidator));
   }
 
   onSubmit() {
