@@ -12,7 +12,8 @@ import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
 //import { AppModule } from './lessons/start/8-form-validating/app.module';
 //import { AppModule } from './lessons/start/9-auth-firebase/app.module';
 //import { AppModule } from './lessons/start/10-pipes/app.module';
-import { AppModule } from './lessons/start/11-http/app.module';
+//import { AppModule } from './lessons/start/11-http/app.module';
+import { AppModule } from './lessons/start/12-redux/app.module';
 
 // Onle one import AddModule at a time
 // After change, do npm start
