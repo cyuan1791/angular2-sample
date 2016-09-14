@@ -26,7 +26,7 @@ var CounterComponent = (function () {
         var _this = this;
         this.store = store;
         store.subscribe(function () { return _this.readState(); });
-        this.readState();
+        //this.readState();
     }
     CounterComponent.prototype.readState = function () {
         var state = this.store.getState();

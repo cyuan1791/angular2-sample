@@ -50,7 +50,7 @@ export default class CounterComponent {
 
   constructor(@Inject(AppStore) private store: Store<AppState>) {
     store.subscribe(() => this.readState());
-    this.readState();
+     this.readState();
   }
 
   readState() {
