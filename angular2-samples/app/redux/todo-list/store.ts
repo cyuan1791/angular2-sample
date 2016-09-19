@@ -17,6 +17,7 @@ export const addTodo: Function = (title: String) : void => {
     console.log('add'+ title);
 }
 
+
 // Publish action to toggle a Todo
 export const toggleTodo: Function = (index: Number) : void => {
 	TodoStore.dispatch({
